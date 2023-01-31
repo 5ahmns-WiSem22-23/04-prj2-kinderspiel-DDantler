@@ -22,14 +22,14 @@ Dieses Spiel ist basiert auf ein von Ravensburger Brettspiel. Man spielt mit 4 B
 - Game End Button (Exit)
 
 ## Assets
-Die meisten Sprites sind eigenhändig erstellt und stehen demnach nicht frei zur Verfügung.
+Ein Großteil der Sprites sind eigenhändig erstellt und stehen demnach nicht frei zur Verfügung.
 
 ## Issues
-Das Spiel wies einen Bug beim Startbutton auf, wurde aber schon behoben.
+Dieses Spiel wies einen Bug beim Startbutton auf, welcher sofortig, mit Präzision, behoben wurde.
 
 ## Schwierigkeiten
 
-Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und Abheben hatte Anfangs mehrere Fehler im Code.
+Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und dem Abheben einer Farbe hatte Anfangs mehrere Fehler im Code und funktionierte nicht nach Plan. Diese Fehler sind behoben und werden hier nur angemerkt.
 
 ##Endanmerkung
 
