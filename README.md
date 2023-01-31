@@ -31,7 +31,7 @@ Dieses Spiel wies einen Bug beim Startbutton auf, welcher sofortig, mit Präzisi
 
 ## Schwierigkeiten
 
-Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und dem Abheben einer Farbe hatte Anfangs mehrere Fehler im Code und funktionierte nicht nach Plan. Diese Fehler sind behoben und werden hier nur **angemerkt.
+Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und dem Abheben einer Farbe hatte Anfangs mehrere Fehler im Code und funktionierte nicht nach Plan. Diese Fehler sind behoben und werden hier nur *angemerkt.
 
 ## Endanmerkung
 
