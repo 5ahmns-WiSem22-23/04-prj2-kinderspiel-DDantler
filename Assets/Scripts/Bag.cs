@@ -10,7 +10,7 @@ public class Bag : MonoBehaviour
 
     private int turnIndex = 0;
     private string[] turnOrder = { "Red", "Green", "Blue", "Yellow" };
-    private bool[] monkeySpawned = { false, false, false, false };
+    private int[] spawnCount = { 0, 0, 0, 0 };
 
     private void Start()
     {
@@ -19,30 +19,40 @@ public class Bag : MonoBehaviour
 
     public void OnBagButtonClick()
     {
-        int randomMonkeyIndex = -1;
-        for (int i = 0; i < monkeyPrefabs.Length; i++)
+        int monkeyIndex = 0;
+        for (int i = 0; i < turnOrder.Length; i++)
         {
-            if (monkeyPrefabs[i].name == turnOrder[turnIndex] && !monkeySpawned[i])
+            if (turnOrder[turnIndex] == monkeyPrefabs[i].name)
             {
-                randomMonkeyIndex = i;
+                monkeyIndex = i;
                 break;
             }
         }
 
-        if (randomMonkeyIndex == -1)
+        int randomLocationIndex = -1;
+        for (int i = 0; i < spawnLocations.Length; i++)
         {
-            randomMonkeyIndex = Random.Range(0, monkeyPrefabs.Length);
+            if (spawnLocations[i].name.Contains(turnOrder[turnIndex]) && spawnCount[monkeyIndex] < 6)
+            {
+                randomLocationIndex = i;
+                spawnCount[monkeyIndex]++;
+                break;
+            }
         }
 
-        int randomLocationIndex = Random.Range(0, spawnLocations.Length);
+        if (randomLocationIndex == -1) return;
 
-        GameObject spawnedMonkey = Instantiate(monkeyPrefabs[randomMonkeyIndex],
-                                                spawnLocations[randomLocationIndex].position,
+        Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+        GameObject spawnedMonkey = Instantiate(monkeyPrefabs[monkeyIndex],
+                                                spawnLocations[randomLocationIndex].position + offset,
                                                 Quaternion.identity);
 
-        monkeySpawned[randomMonkeyIndex] = true;
-
-        if (turnOrder[turnIndex] == spawnedMonkey.name)
+        if (spawnCount[monkeyIndex] == 6)
+        {
+            turnText.text = turnOrder[turnIndex] + " has won!";
+            this.GetComponent<Button>().interactable = false;
+        }
+        else
         {
             turnIndex = (turnIndex + 1) % turnOrder.Length;
             turnText.text = "Turn: " + turnOrder[turnIndex];

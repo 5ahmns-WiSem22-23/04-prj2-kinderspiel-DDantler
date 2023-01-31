@@ -1,17 +1,23 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class RetryButton : MonoBehaviour
 {
-    public TMP_Text retryText;
+    private Button button;
 
-    void Start()
+    private void Start()
     {
-        retryText.gameObject.SetActive(false);
+        button = GetComponent<Button>();
+        button.interactable = false;
     }
 
-    public void ShowRetryButton()
+    public void Enable()
     {
-        retryText.gameObject.SetActive(true);
+        button.interactable = true;
+    }
+
+    public void Disable()
+    {
+        button.interactable = false;
     }
 }
