@@ -1,5 +1,5 @@
 # 04-prj2-kinderspiel-DDantler
-A game made by adult kids for kids
+A game made by adult kids for kids ![Monkey](https://user-images.githubusercontent.com/72389889/215890902-817f4cc7-2bc9-4450-9c3d-c18f4653148f.png)
 
 Dieses Spiel ist ein Schuleinzelprojekt in dem Fach MTIN der HTBLuVA-Salzburg, im Zweig Multimedia, welches als ein Teil der Benotung für die Abschlussklasse 22/23 gewertet wird.
 
@@ -9,7 +9,7 @@ Von drei verschiedenen Brettspielen muss eines gewählt und dann digitalisiert w
 
 ## Spielmechanik
 
-Dieses Spiel ist basiert auf ein von Ravensburger Brettspiel. Man spielt mit 4 Brettern die vier Farben repräsentieren. Einer muss
+Dieses Spiel basiert auf ein Ravensburger Brettspiel namens "Die Affenbande". Das Spiel wird stets mit vier Feldern gespielt, wobei jedes eine Farbe, Rot, Grün, Blau oder Gelb, repräsentiert. Ist ein Spieler am Zug, muss er eine Farbe ziehen. Stimmt diese Farbe nicht die seiner überein, muss er diese abgeben und darf nochmal ziehen. Zieht er dessen eigene, ist hiermit sein Zug beendet und der Spieler links darf seinen Zug beginnen.
 
 ## Eigene Features
 
@@ -29,7 +29,7 @@ Dieses Spiel wies einen Bug beim Startbutton auf, welcher sofortig, mit Präzisi
 
 ## Schwierigkeiten
 
-Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und dem Abheben einer Farbe hatte Anfangs mehrere Fehler im Code und funktionierte nicht nach Plan. Diese Fehler sind behoben und werden hier nur angemerkt.
+Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und dem Abheben einer Farbe hatte Anfangs mehrere Fehler im Code und funktionierte nicht nach Plan. Diese Fehler sind behoben und werden hier nur **angemerkt.
 
 ##Endanmerkung
 
