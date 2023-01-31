@@ -15,6 +15,7 @@ Dieses Spiel basiert auf ein Ravensburger Brettspiel namens "Die Affenbande". Da
 ## Eigene Features
 
 - Menu Screen
+- Soundeffekte
 - Start Button
 - Bag Button
 - Spielmusik ist eigenständig erstellt (nicht die Menümusik)
