@@ -1,5 +1,6 @@
 # 04-prj2-kinderspiel-DDantler
-A game made by adult kids for kids ![Monkey](https://user-images.githubusercontent.com/72389889/215890902-817f4cc7-2bc9-4450-9c3d-c18f4653148f.png)
+![Monkey](https://user-images.githubusercontent.com/72389889/215890902-817f4cc7-2bc9-4450-9c3d-c18f4653148f.png)
+A game made by adult kids for kids 
 
 Dieses Spiel ist ein Schuleinzelprojekt in dem Fach MTIN der HTBLuVA-Salzburg, im Zweig Multimedia, welches als ein Teil der Benotung für die Abschlussklasse 22/23 gewertet wird.
 
