@@ -3,8 +3,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class RetryButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public string sceneName;
     public AudioClip hoverSound;
     private AudioSource audioSource;
 
@@ -15,6 +16,7 @@ public class RetryButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         button.onClick.AddListener(() => {
 
+            SceneManager.LoadScene(sceneName);
         });
 
         audioSource = gameObject.AddComponent<AudioSource>();

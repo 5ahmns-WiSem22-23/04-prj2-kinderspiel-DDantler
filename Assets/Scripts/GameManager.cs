@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour
     public int turnCount;
     public TextMeshProUGUI turnDisplay;
     public Button button;
-    public GameObject retryButton;
+    public GameObject retryButton, menuButton;
     public GameObject redPrefab, greenPrefab, bluePrefab, yellowPrefab;
     public Transform redSpawn, greenSpawn, blueSpawn, yellowSpawn;
+    public AudioSource audioSource;
+    public AudioClip retryButtonSound;
 
     public Vector2 spawnSpread = new Vector2(2, 2);
     private GameObject[] prefabs;
@@ -21,7 +23,8 @@ public class GameManager : MonoBehaviour
     {
         prefabs = new GameObject[] { redPrefab, greenPrefab, bluePrefab, yellowPrefab };
         spawns = new Transform[] { redSpawn, greenSpawn, blueSpawn, yellowSpawn };
-        retryButton.SetActive(true);
+        retryButton.SetActive(false);
+        menuButton.SetActive(false);
         turnCount = 0;
         turnDisplay.text = "Turn: " + prefabs[turnCount].name;
     }
@@ -56,6 +59,8 @@ public class GameManager : MonoBehaviour
             turnDisplay.text = "Game Over";
             button.interactable = false;
             retryButton.SetActive(true);
+            menuButton.SetActive(true);
+            audioSource.PlayOneShot(retryButtonSound);
             return;
         }
 
@@ -76,33 +81,37 @@ public class GameManager : MonoBehaviour
         newPrefab.transform.SetParent(spawnPoint);
     }
 
-    public void RetryButtonClicked()
-    {
-        retryButton.SetActive(true);
-        redCount = 0;
-        greenCount = 0;
-        blueCount = 0;
-        yellowCount = 0;
-        turnDisplay.text = "";
-        turnCount = 0;
-        button.interactable = true;
-    }
 
     public void RetryButtonClicked()
     {
-        retryButton.SetActive(false);
+        retryButton.SetActive(true);
+        retryButton.GetComponent<Button>().interactable = true;
         redCount = 0;
         greenCount = 0;
         blueCount = 0;
         yellowCount = 0;
         turnDisplay.text = "Turn: " + prefabs[turnCount].name;
+        turnCount = 0;
         button.interactable = true;
-
-        GameObject[] existingPrefabs = GameObject.FindGameObjectsWithTag("Prefab");
-        foreach (GameObject prefab in existingPrefabs)
+        foreach (Transform child in redSpawn)
         {
-            Destroy(prefab);
+            Destroy(child.gameObject);
         }
+        foreach (Transform child in greenSpawn)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in blueSpawn)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in yellowSpawn)
+        {
+            Destroy(child.gameObject);
+        }
+
+        retryButton.SetActive(false);
+        menuButton.SetActive(false);
     }
 
 }

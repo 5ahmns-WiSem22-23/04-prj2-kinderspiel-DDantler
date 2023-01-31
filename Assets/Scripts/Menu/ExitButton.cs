@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class RetryButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ExitButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public AudioClip hoverSound;
     private AudioSource audioSource;
@@ -31,5 +31,10 @@ public class RetryButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
 
         audioSource.Stop();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
