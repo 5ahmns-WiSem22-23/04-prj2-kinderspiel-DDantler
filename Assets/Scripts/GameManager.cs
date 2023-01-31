@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Transform redSpawn, greenSpawn, blueSpawn, yellowSpawn;
     public AudioSource audioSource;
     public AudioClip retryButtonSound;
+    public AudioClip buttonClickSound;
 
     public Vector2 spawnSpread = new Vector2(2, 2);
     private GameObject[] prefabs;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
         Transform chosenSpawn = spawns[randomIndex];
 
         SpawnPrefab(chosenPrefab, chosenSpawn);
+
+        audioSource.PlayOneShot(buttonClickSound);
 
         if (chosenPrefab == redPrefab)
         {

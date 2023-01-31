@@ -10,26 +10,22 @@ public class ExitButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void Start()
     {
-
         Button button = GetComponent<Button>();
-
-        button.onClick.AddListener(() => {
-
-        });
+        button.onClick.AddListener(QuitGame);
 
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = hoverSound;
+        audioSource.playOnAwake = false;
+        audioSource.loop = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-
         audioSource.Play();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-
         audioSource.Stop();
     }
 
