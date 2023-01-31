@@ -33,7 +33,7 @@ Dieses Spiel wies einen Bug beim Startbutton auf, welcher sofortig, mit Präzisi
 
 Die größte Schwierigkeit wies sich im Randomizer auf. Der Wechsel von Spielzug und dem Abheben einer Farbe hatte Anfangs mehrere Fehler im Code und funktionierte nicht nach Plan. Diese Fehler sind behoben und werden hier nur **angemerkt.
 
-##Endanmerkung
+## Endanmerkung
 
 Dieses Spiel ist ein in einer Schule entstandenes Projekt, welches rein als eine Möglichkeit zur Weiterbildung im Bereich Programmieren im Bezug zu Unity 2D dient.
 
