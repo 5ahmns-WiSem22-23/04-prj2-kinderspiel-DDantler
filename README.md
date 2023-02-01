@@ -14,7 +14,7 @@ Dieses Spiel basiert auf ein Ravensburger Brettspiel namens "Die Affenbande". Da
 
 ## Screenshots
 
-![Uploading Screen2.JPG…]()
+![Screen2](https://user-images.githubusercontent.com/72389889/216000783-ae7fc5d8-0e35-42c2-9211-afe8f61f366f.JPG)
 ![Screen1](https://user-images.githubusercontent.com/72389889/216000576-1e66c19f-7416-4a16-8c52-528de085cc70.JPG)
 
 
