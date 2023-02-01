@@ -12,6 +12,12 @@ Von drei verschiedenen Brettspielen muss eines gewählt und dann digitalisiert w
 
 Dieses Spiel basiert auf ein Ravensburger Brettspiel namens "Die Affenbande". Das Spiel wird stets mit vier Feldern gespielt, wobei jedes eine Farbe, Rot, Grün, Blau oder Gelb, repräsentiert. Ist ein Spieler am Zug, muss er eine Farbe ziehen. Stimmt diese Farbe nicht die seiner überein, muss er diese abgeben und darf nochmal ziehen. Zieht er dessen eigene, ist hiermit sein Zug beendet und der Spieler links darf seinen Zug beginnen.
 
+## Screenshots
+
+![Uploading Screen2.JPG…]()
+![Screen1](https://user-images.githubusercontent.com/72389889/216000576-1e66c19f-7416-4a16-8c52-528de085cc70.JPG)
+
+
 ## Eigene Features
 
 - Menu Screen
